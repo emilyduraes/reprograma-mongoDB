@@ -10,16 +10,10 @@ const comidas = [
 const batatinha = comidas.filter(comida => comida === 'Batata frita')
 console.log(batatinha)
 
-// Jeito mais complicado de fazer o filter:
-const batatinhaComplicada = comidas.filter(comida => {
-  if(comida === 'Batata frita') return true
-  else return false
-})
+// Exercício: Selecione apenas as comidas que comecem com "s" ou "b"
 
-
-const comida = 'teste'
-console.log(comida === 'Batata frita')
-
+const comidasComSOuB = comidas.filter(comida => (/^s|^b/i).test(comida))
+console.log(comidasComSOuB)
 
 // Exercício: transforme a lista de comidas em comidas divertidas (adicione uma carinha feliz nelas)
 const comidasFelizesEComplexas = comidas.map(comida => {
